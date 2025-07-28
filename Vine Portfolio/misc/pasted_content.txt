@@ -1,0 +1,238 @@
+Okay, here is the complete and final prompt, incorporating the application name "Trade Doctor" and the company name "Vine Analytics."
+
+App Development Prompt: Trade Doctor - Advanced Trading Journal & Performance Tracker
+
+I. Project Title: Trade Doctor - Advanced Trading Journal & Performance Tracker
+
+II. Project Goal:
+Develop a user-friendly and comprehensive mobile/web application, developed by Vine Analytics, designed to help traders meticulously track their trading activities across multiple accounts, analyze performance, manage risk effectively, and identify patterns for optimizing trading strategies and achieving better gains. The app, "Trade Doctor," should serve as a smart journal and analytical tool, moving beyond simple P&L tracking, with a strong emphasis on a centralized, presentable overview of overall progress and detailed, individual account management, complemented by sophisticated risk management tools.
+
+III. Core Features & Functionality:
+
+Centralized Main Dashboard (The "One Main Dashboard"):
+
+Purpose: Provide an immediate, high-level overview of the user's entire trading portfolio across all linked accounts. This is the primary landing page upon login for "Trade Doctor."
+
+Key Metrics Displayed:
+
+Overall Portfolio P&L: Aggregate profit/loss ($ and %) across all active accounts.
+
+Current Portfolio Balance: Total capital across all accounts.
+
+Overall Current Max Drawdown: The largest open or recent drawdown across the entire portfolio, or the highest individual account drawdown.
+
+Portfolio-level Progress: Visual representation (e.g., progress bar, dial) showing overall gain vs. a collective target (if defined, or aggregate of individual targets).
+
+Top/Bottom Performers: Quick glance at which accounts or instruments are performing best/worst.
+
+Open Trades Summary: Number of open trades, total open P&L across all accounts.
+
+Risk Exposure Summary: A high-level view of current risk across all accounts (e.g., total capital at risk based on open stops).
+
+Visualizations: Concise charts showing:
+
+Combined Equity Curve of all accounts.
+
+Overall Portfolio Drawdown Curve.
+
+Allocation of capital across different accounts.
+
+Account Management & Individual Account Views (The "Multiple Windows"):
+
+Structure: Implement a system where users can easily switch between or view different trading accounts, ideally with dedicated "windows," tabs, or sections for each.
+
+Ability to Add & Manage Multiple Trading Accounts:
+
+Each account is distinct and independently managed.
+
+For each individual account:
+
+Account Name/Nickname: (e.g., "Main Stocks", "Forex Hedging", "Crypto Altcoins").
+
+Broker/Platform: (e.g., Interactive Brokers, Binance).
+
+Initial Capital:
+
+Current Balance: (updates automatically with trade entries/exits).
+
+Individual Account P&L: ($ and %) for the selected period.
+
+Individual Account Profit Target: (e.g., 20% annual gain for this specific account).
+
+Individual Account Maximum Allowable Drawdown: (e.g., 10% of capital for this specific account).
+
+Trading Style/Mode: Allow the user to assign a "Trading Model" to each account or specific trading periods. These models can influence risk suggestions and reporting. Examples:
+
+"Risk-Free Mode" / "Demo Mode": For practice accounts or strategies where no real capital is risked, or extremely minimal risk (e.g., 0.1% per trade).
+
+"High Risk Mode": Characterized by higher capital allocation per trade (e.g., 2-5% risk per trade), higher profit targets, and potentially larger allowable drawdowns.
+
+"Medium Risk Mode": Standard approach (e.g., 1% risk per trade), balanced targets and drawdowns.
+
+Users should be able to define custom parameters for these modes if desired.
+
+Summary Dashboard for Each Account: Dedicated view for the selected account showing its specific P&L, equity curve, drawdown, win rate, average win/loss, etc. This is where the user dives deep into an account's performance.
+
+Trade Entry & Management (Per Account):
+
+Intuitive form for entering new trades.
+
+Crucial Integration: When entering a trade, the user must select the specific trading account it belongs to. All subsequent analytics will be tied to this selection.
+
+Required Fields for Each Trade:
+
+Account: Automatically populated or selected from the active "window/tab" but must be explicitly linked.
+
+Trade ID/Name: Unique identifier or custom name for the trade.
+
+Instrument/Asset: (e.g., AAPL, EUR/USD, BTC/USD).
+
+Trade Type: Long / Short.
+
+Entry Date & Time:
+
+Entry Price:
+
+Stop Loss Price:
+
+Take Profit Price (Profit Target): The intended exit price for profit.
+
+Calculated Risk % / R-multiple: Automatically show the calculated risk percentage of the account and the R-multiple (Risk-Reward) for the trade based on entry, stop, and target.
+
+Risk Type Classification (User-Definable): Allow users to define and select custom risk categories for each trade, which can be globally defined or account-specific. Examples:
+
+T1 (Low Risk): Defined parameters like 0.5% capital risked, high conviction setup.
+
+T2 (Medium Risk): Defined parameters like 1% capital risked, standard setup.
+
+T3 (High Risk): Defined parameters like 2% capital risked, aggressive setup.
+
+Users should be able to name these types (e.g., "A-Setup", "B-Setup", "Gambit") and associate descriptive notes with each type.
+
+Trade Notes/Journaling: Rich text field to write down trade rationale, emotions, observations, and lessons learned.
+
+Status: Open, Closed, Pending, Canceled.
+
+Upon Closing a Trade:
+
+Exit Date & Time:
+
+Exit Price:
+
+Actual Profit/Loss: Automatically calculated ($ and %).
+
+Realized Drawdown for Trade: The maximum price decline from entry or highest point of the trade while open before exiting (if applicable).
+
+Reason for Exit: (e.g., Hit Stop Loss, Hit Take Profit, Manual Exit, Time-based Exit).
+
+Ability to edit or delete existing trades.
+
+Performance Analytics & Reporting (Account-Specific & Aggregated):
+
+Detailed Trade History:
+
+Filter trades by account (essential), instrument, date range, trade type (long/short), status, and Risk Type (T1, T2, T3).
+
+Sort by P&L, date, instrument, etc.
+
+Visualizations/Charts:
+
+Account-Specific Charts: Equity Curve, Drawdown Chart, P&L distribution by instrument/asset, Performance breakdown by Risk Type (T1, T2, T3) for that specific account. Also, breakdown by assigned Trading Style/Mode.
+
+Aggregated Charts (on Main Dashboard): Combined Equity Curve, Overall Drawdown Curve.
+
+Key Performance Indicators (KPIs):
+
+Average R-multiple (e.g., 2R, -1R).
+
+Expectancy.
+
+Sharpe Ratio (if feasible with data).
+
+Profit Factor.
+
+Max Consecutive Wins/Losses.
+
+Advanced Risk Management & Optimization Tools:
+
+Risk Management Calculator:
+
+Input: Account Balance, Risk Percentage per trade (e.g., 1%), Entry Price, Stop Loss Price.
+
+Output: Maximum allowable capital to risk, maximum position size (in units/shares/lots).
+
+Lot Size Calculator:
+
+For Forex (Major Currency Pairs):
+
+Input: Account Balance, Risk %, Stop Loss (in pips), Currency Pair, Account Currency.
+
+Output: Required Lot Size (Standard, Mini, Micro).
+
+For Stocks:
+
+Input: Account Balance, Risk %, Entry Price, Stop Loss Price, Stock Price.
+
+Output: Number of Shares.
+
+For Commodities & Indices:
+
+Input: Account Balance, Risk %, Entry Price, Stop Loss Price, Contract Multiplier/Point Value (user input or pre-defined for common instruments).
+
+Output: Number of Contracts/Units.
+
+Suggestion of Risk Tolerance:
+
+Based on the current status of the account (e.g., recent drawdown, consecutive losses/wins, proximity to maximum allowable drawdown), the app should provide an intelligent suggestion for the next trade's recommended risk percentage or a warning.
+
+Example Suggestions: "Given your recent 5% drawdown, consider reducing your risk per trade to 0.5% temporarily." or "Your account is performing well in 'High Risk Mode'; maintain current risk or consider slight increase."
+
+Consideration of the currently active "Trading Style/Mode" for the account when suggesting.
+
+Alerts or visual cues if an account's drawdown approaches its defined maximum allowable drawdown.
+
+Overall portfolio drawdown warning on the Main Dashboard.
+
+Summary of trades by Risk Type (both per account and aggregated) to help identify which risk profiles are most profitable or detrimental across the entire portfolio.
+
+Insights generated based on historical data (e.g., "Your T1 trades across all accounts have a 70% win rate and an average 2R profit," or "Account 'Forex Hedging' has exceeded its drawdown limit this month due to T3 trades").
+
+IV. User Interface (UI) / User Experience (UX) Requirements:
+
+Intuitive Multi-Account Navigation: Clear and easy way to switch between individual account views (e.g., tabs, sidebar menu with account names, dropdown selector).
+
+Prominent Main Dashboard: The main dashboard must be highly visual, informative, and provide a clear "at a glance" understanding of overall progress.
+
+Integrated Calculators: Calculators should be easily accessible from the trade entry screen and/or a dedicated "Tools" section.
+
+Clean, intuitive, and easy-to-navigate interface.
+
+Efficient data entry with clear validation.
+
+Mobile-first design (if a mobile app) or responsive design (if web app) to accommodate different screen sizes.
+
+Highly Presentable Progress Tracking: Use engaging visuals (progress bars, dials, color-coding) to show how close accounts and the overall portfolio are to their profit targets and how far they are from drawdown limits.
+
+Ability to export data (e.g., CSV, PDF) for individual accounts and aggregated reports.
+
+V. Technical Considerations (Optional, but helpful for developers):
+
+Secure user authentication.
+
+Robust data persistence (cloud-based for accessibility across devices).
+
+Scalable architecture to handle growing trade data across multiple accounts.
+
+Potential for configurable instrument data (e.g., point values for commodities/indices) by the user.
+
+VI. Future Enhancements (Post-MVP):
+
+Integration with popular brokerage APIs for automatic trade import.
+
+Backtesting module for strategies.
+
+Customizable dashboard widgets.
+
+Ability to attach screenshots or files to trades.
+
+Peer comparison/anonymized community statistics (opt-in).
